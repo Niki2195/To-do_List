@@ -54,6 +54,13 @@ button:hover {
   background-color: #218838;
 }
 
+/* Блок фильтров */
+#filters {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
 /* Список задач */
 ul {
   list-style-type: none; /* Убираем маркеры */
@@ -62,12 +69,24 @@ ul {
 /* Элемент задачи */
 li {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 10px;
   margin-bottom: 10px;
   background-color: #fff;
   border-radius: 5px;
   border: 1px solid #ddd;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+li span.done {
+  text-decoration: line-through;
+  color: #888;
 }
 
 /* Кнопка удаления задачи */
@@ -84,3 +103,4 @@ li {
 .delete-btn:hover {
   background-color: #c82333;
 }
+
